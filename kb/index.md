@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Sample Articles
-excerpt: "An archive of articles sorted by date."
+title: knowledge Base
+excerpt: "All our learning, for you."
 search_omit: true
 ---
 
