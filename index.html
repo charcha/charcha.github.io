@@ -7,6 +7,18 @@ search_omit: true
 
 <h2> Welcome to Charcha</h2>
 <form class="simple-search">
-<input type="text" placeholder="Enter a name for discussion" id="goog-wm-qt" /><br />
-<input type="submit" value="Lets Charcha" id="goog-wm-sb" />
+    <fieldset>
+        <p>
+            <input type="text" placeholder="Enter a name for discussion" id="sessionname" />
+        </p>
+        <input type="submit" value="Lets Charcha" id="start_session" class="btn"/>
+    </fieldset>
 </form>
+
+<script type="text/javascript">
+    $("#start_session").click(function(){
+        var session = $("#sessionname").val();
+        var roomname = session.toLowerCase().replace(/[\*\^\'\_\!]/g, '').split(' ').join('-')
+        window.location.href = "/charcha/?session="+roomname;
+    })
+</script>
