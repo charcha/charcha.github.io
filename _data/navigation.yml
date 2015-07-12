@@ -1,19 +1,16 @@
 # Site navigation links
 
+- title: Charcha Now
+  url: /
+
+- title: Docs 
+  url: /docs/
+
+- title: Knowledge Base
+  url: /kb/
+
 - title: About
   url: /about/
 
-- title: Articles
-  url: /articles/
-
-- title: Blog
-  url: /blog/
-
-- title: Theme Setup
-  url: /theme-setup/
-
-- title: Made Mistakes
-  url: http://mademistakes.com
-
-- title: Search
-  url: /search/
+- title: Credits 
+  url: /credits 
