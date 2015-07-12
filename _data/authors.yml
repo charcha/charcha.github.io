@@ -1,15 +1,4 @@
 # Authors
-
-billy_rick:
-  name: Billy Rick
-  web: http://thewhip.com
-  email: billy@rick.com
-  bio: "What do you want, jewels? I am a very extravagant man."
-  avatar: bio-photo-2.jpg
-  twitter: extravagantman
-  google:
-    plus: BillyRick
-
 cornelius_fiddlebone:
   name: Cornelius Fiddlebone
   email: cornelius@thewhip.com
@@ -18,3 +7,14 @@ cornelius_fiddlebone:
   twitter: rhymeswithsackit
   google:
     plus: CorneliusFiddlebone
+
+Ramaseshan:
+  name: Ramaseshan
+  web: ramaseshan.github.io
+  email: ramaseshan@tuta.io
+  bio: "Be curious, Read widely, Try new things. What people call intelligence just boils down to curiosity"
+  avatar: 
+  twitter: seshan228
+  google:
+    plus: ramaseshanmukund
+
