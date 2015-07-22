@@ -69,6 +69,18 @@ select {
 			width: 2px;
 			color: lighten($black, 80);
 		}
+		top: {
+			width: 0px;
+			color: #fff;
+		}
+		left: {
+			width: 0px;
+			color: #fff;
+		}
+		right: {
+			width: 0px;
+			color: #fff;
+		}		
 	}
 	color: $text-color; 
 	&:hover {
@@ -77,6 +89,18 @@ select {
 			bottom: {
 				width: 2px;
 				color: lighten($accent-color, 50);
+			}
+			top: {
+				width: 0px;
+				color: #fff;
+			}
+			left: {
+				width: 0px;
+				color: #fff;
+			}
+			right: {
+				width: 0px;
+				color: #fff;
 			}
 		}
 	}
