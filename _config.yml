@@ -32,7 +32,7 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 owner:
   name: Charcha 
   avatar: bio-photo.jpg
-  email: you@email.com
+  email: hello@charcha.space
   disqus-shortname:
   twitter: #username
   facebook: #username
