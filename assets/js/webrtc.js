@@ -2,6 +2,8 @@
     window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(str,key,value){params[key] = value;});
     var session = params["session"];
 
+    var joined = false;
+    
     var a;
     
     var name = prompt("Please enter your name", "");
@@ -26,19 +28,23 @@
     
     // setup signaling channel
     connection.connect();
-    connection.open();
+    //connection.open();
     
     // open new session
-    //document.querySelector('#openNewSessionButton').onclick = function() {
-    //    connection.open();
-    //};
+    document.querySelector('#openNewSessionButton').onclick = function() {
+        connection.open();
+    };
     
     connection.onopen = function(event) {
         console.log('Text chat has been opened between you and ' + event.userid);
         document.getElementById('input-text-chat').disabled = false;
         document.getElementById('openNewSessionButton').style.display = "none";
-        a = { "type": "join" , "data": {"name": name}};
-        connection.send( a );
+        if (!joined)
+        {
+            a = { "type": "join" , "data": {"name": name}};
+            connection.send( a );
+            joined = true;
+        }
     };
     
     connection.onmessage = function(event) {
@@ -107,7 +113,7 @@
     //     setTimeout(1000);
     // }
     
-    connection.onleave = function(e) {
+    connection.onclose = function(e) {
         a = { "type": "leave" , "data": {"name": name}};
         connection.send( a );  
     };

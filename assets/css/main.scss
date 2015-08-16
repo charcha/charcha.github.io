@@ -47,6 +47,10 @@ sitemap: false
 @import "search";
 @import "footer";
 
+/*custom included other then the theme itself*/
+@import "chat";
+@import "grid";
+
 /*
    Page specific
    ========================================================================== */

@@ -1,24 +1,80 @@
 ---
-layout: home 
+layout: charcha
 title: Home Page 
 excerpt: "Audio discusions platform"
 search_omit: true
 permalink: /charcha/
 ---
+<style>
+ .entry-wrapper {
+  margin:0px;
+ }
+</style>
 
-<h2> Welcome to Charcha</h2>
-<div class="col-sm-12 col-md-4 col-lg-4">
-                      <div class="panel panel-primary">
-                         <div class="panel-heading">Chat</div>
-                        <div class="panel-body">
-                         <div id="chatbox">
-                             <ul class="chat" id="chat"></ul>
-                        </div>
-                     </div>
-                      <div class="form-group">
-                           <input type="text" class="form-control" placeholder="Chat" id="input-text-chat" disabled>
-                    </div>
-                </div>
+
+
+<div class="grid grid-pad">
+    <div class="col-8-12">
+       <div class="content">
+        
+           <h2> Welcome to Charcha</h2>
+           <button id="openNewSessionButton" class="btn">I'm ready</button>
+       </div>
+    </div>
+    <div class="col-4-12">
+       <div class="content">
+                        <div id="chatbox">
+                  <ul class="chat" id="chat"></ul>
+               </div>
+
+            <!--New chat code. The other part needs to be re-written -->
+        <section class="module" id="sidebar">
+          
+          <header class="top-bar">
+            
+            <div class="left">
+              <span class="icon typicons-message"></span>
+              <h1>Chat</h1>
+            </div>
+          </header>
+          
+          <ol class="discussion">
+            <li class="other">
+              <div class="avatar">
+                <img src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/5/profile/profile-80_9.jpg" />
+              </div>
+              <div class="messages">
+                <p>yeah, they do early flights cause they connect with big airports.  they wanna get u to your connection</p>
+                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+              </div>
+            </li>
+            <li class="self">
+              <div class="avatar">
+                <img src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/3/profile/profile-80_20.jpg" />
+              </div>
+              <div class="messages">
+                <p>That makes sense.</p>
+                <p>It's a pretty small airport.</p>
+                <time datetime="2009-11-13T20:14">37 mins</time>
+              </div>
+            </li>
+            <li class="other">
+              <div class="avatar">
+                <img src="http://s3-us-west-2.amazonaws.com/s.cdpn.io/5/profile/profile-80_9.jpg" />
+              </div>
+              <div class="messages">
+                <p>that mongodb thing looks good, huh?</p>
+                <p>
+                  tiny master db, and huge document store</p>
+              </div>
+            </li>
+          </ol>
+           <input type="text" class="form-control" placeholder="Chat" id="input-text-chat" disabled>
+        </section>
+       </div>
+    </div>
+</div>
+
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <script src="//cdn.webrtc-experiment.com/RTCMultiConnection.js"></script>
 <script src="/assets/js/webrtc.js"></script>
