@@ -50,14 +50,22 @@
     connection.onmessage = function(event) {
         if (event.data["type"] == "chat")
         {
-            var msg = "<li><div class='header'><strong class='primary-font'>" + event.data["data"]["name"] + "</strong></div>";
-            msg +=  "<p>" + event.data["data"]["chat"] + "</p></li>";
-            document.querySelector("#chat").innerHTML +=  msg;
+            // This is the chat code
+            // If we want to get the user name who sent the chat : event.data["data"]["name"]
+            // If we want to get the chat message : event.data["data"]["chat"]
+            // This code will append the chat into the chat box.
+            var msg = '<li class="other"><div class="avatar">'+event.data["data"]["name"]+'</div>'+
+                '<div class="messages"><p>'+event.data["data"]["chat"]+'</p></div></li>'
+            $(".discussion").append(msg)
+            // this will calculate the total scroll height of the scrollbox.
+            var scrollTo_int = $(".discussion").prop('scrollHeight') + 'px';
+            // This will scroll the discussion to that last chat.
+            $(".discussion").slimScroll({ scrollBy: scrollTo_int});
         }
         else if (event.data["type"] == "join")
         {
-            var msg = event.data["data"]["name"] + " has joined";
-            document.querySelector("#chat").innerHTML += "<li><center>" + msg + "</center></li>";
+            var name = event.data["data"]["name"];
+            document.querySelector(".online").innerHTML += "<li id='"+name+"'><center>" + name + "</center></li>";
         }
         else if (event.data["type"] == "leave")
         {
@@ -97,12 +105,19 @@
         a = { "type": "chat" , "data": {"name": name, "chat": value}};
         
         connection.send( a );
-        var msg = "<li><div class='header'><strong class='primary-font'>" + a["data"]["name"] + "</strong></div>";
-            msg +=  "<p>" + a["data"]["chat"] + "</p></li>";
-        //document.querySelector("#chat").appendChild(document.createTextNode(msg));  
-        document.querySelector("#chat").innerHTML +=  msg;
-        var objDiv = document.getElementById("chatbox");
-        objDiv.scrollTop = objDiv.scrollHeight;
+        // The above line will send our chat message to the other people, when we hit enter.
+        // The below line, adds the text on the html page.
+        // How do we know the name and message ?
+        // a["data"]["name"]  -- name
+        // a["data"]["chat"] -- message we typed.
+        // class =self, meaning, I have sent the messge.
+        var msg = '<li class="self"><div class="avatar">'+a["data"]["name"]+'</div>'+
+                '<div class="messages"><p>'+a["data"]["chat"]+'</p></div></li>';
+        $(".discussion").append(msg)
+        // this will calculate the total scroll height of the scrollbox.
+        var scrollTo_int = $(".discussion").prop('scrollHeight') + 'px';
+        // This will scroll the discussion to that last chat.
+        $(".discussion").slimScroll({ scrollBy: scrollTo_int});
         // $("#chat").append(msg)    
         this.value = '';
     };
@@ -118,3 +133,7 @@
         connection.send( a );  
     };
     
+    // This is the slimscroll initialization
+     $('.discussion').slimScroll({
+        height: '400px'
+    });
