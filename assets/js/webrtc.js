@@ -64,8 +64,8 @@
         }
         else if (event.data["type"] == "join")
         {
-            var msg = event.data["data"]["name"] + " has joined";
-            document.querySelector("#chat").innerHTML += "<li><center>" + msg + "</center></li>";
+            var name = event.data["data"]["name"];
+            document.querySelector(".online").innerHTML += "<li id='"+name+"'><center>" + name + "</center></li>";
         }
         else if (event.data["type"] == "leave")
         {
