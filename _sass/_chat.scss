@@ -22,6 +22,19 @@
     float: right;
     padding-top: 5px;
   }
+  .green-icon{
+    font-size: 1px;
+    border-radius: 50%;
+    border: 6px solid green;
+    padding: -3px;
+  }
+  .red-icon{
+    font-size: 1px;
+    border-radius: 50%;
+    border: 6px solid red;
+    padding: -3px;
+  }
+  
   > * {
     position: relative; 
   }
