@@ -76,7 +76,6 @@
         else if (event.data["type"] == "leave")
         {
             var name = event.data["data"]["name"]
-            console.log(name)
             $("#"+name).remove()
             if($("#" + name).length == 0) {
                 $("#" + name+"_icon").addClass('red-icon');
