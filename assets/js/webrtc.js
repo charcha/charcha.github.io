@@ -65,12 +65,24 @@
         else if (event.data["type"] == "join")
         {
             var name = event.data["data"]["name"];
-            document.querySelector(".online").innerHTML += "<li id='"+name+"'><center>" + name + "</center></li>";
+            document.querySelector(".online").innerHTML += "<li id='"+name+"'><center>" + name + "<i id='"+name+"_icon'></i></center></li>";
+            if($("#" + name).length == 0) {
+                $("#" + name+"_icon").addClass('green-icon');
+            } else {
+                $("#" + name+"_icon").removeClass('red-icon');
+                $("#" + name+"_icon").addClass('green-icon');
+            }
         }
         else if (event.data["type"] == "leave")
         {
-            var msg = event.data["data"]["name"] + " has left";
-            document.querySelector("#chat").innerHTML += "<li><center>" + msg + "</center></li>";
+            var name = event.data["data"]["name"]
+            $("#"+name).remove()
+            if($("#" + name).length == 0) {
+                $("#" + name+"_icon").addClass('red-icon');
+            } else {
+                $("#" + name+"_icon").removeClass('green-icon');
+                $("#" + name+"_icon").addClass('red-icon');
+            }            
         }
         var objDiv = document.getElementById("chatbox");
         objDiv.scrollTop = objDiv.scrollHeight;
