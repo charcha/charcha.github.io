@@ -14,7 +14,7 @@ If you would like to contribute to the project in terms of features or documenta
 - Fork and clone the repo.
 - Checkout to the testing branch.
 - Play around. Try everything you would like to. 
-- Once you are successful and satisfied (read as after enough testing) with any modifications you have made, merge you local changes to the repo's testing branch. 
+- Once you are successful and satisfied (read as after enough testing) with any modifications you have made, merge you changes to the repo's testing branch. 
 
 Another way to contribute to Charcha would be to file bugs. Raise an issue in the GitHub repo and we will work on it before our next release.
 
