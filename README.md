@@ -1,14 +1,21 @@
-# charcha.github.io
-Charcha Official Site
+# Charcha
 
-Development Model : http://nvie.com/posts/a-successful-git-branching-model/
+Charcha Official Site: http://charcha.space/
 
-We will go with a three branch model
-1. Master : The actual site
-2. develop : The code that will go for the next master release
-3. testing : Which will be used to test various features, before integrating into develop.
+Development Model: http://nvie.com/posts/a-successful-git-branching-model/
 
-So we will fork the repo, checkout to the testing branch.
-We will create a local fork of the testing branch, and test things, and once succesful, we will be merging them to the testing branch.
-Once, we are ready for any release, we will merge the testing branch to the develop branch and start some more testing.
-Once we are good and the release date is near, we will fork the develop branch to a version branch and also into the master branch.
+This project follows a three branch model
+
+* __master__: The actual site
+* __develop__: The code that will go for the next master release
+* __testing__: Which will be used to test various features, before integrating into develop.
+
+If you would like to contribute to the project in terms of features or documentation, follow the steps given below. 
+- Fork and clone the repo.
+- Checkout to the testing branch.
+- Play around. Try everything you would like to. 
+- Once you are successful and satisfied (read as after enough testing) with any modifications you have made, merge you local changes to the repo's testing branch. 
+
+Another way to contribute to Charcha would be to file bugs. Raise an issue in the GitHub repo and we will work on it before our next release.
+
+When we are ready for a particular release, we will merge the testing branch to the develop branch and start some more testing. Once we are good to go and the release date is near, we will fork the develop branch to a version branch and also merge it to the master branch.
