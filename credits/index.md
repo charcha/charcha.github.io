@@ -7,8 +7,8 @@ search_omit: true
 Charcha would not be possible without the following tools and technologies.
 
 * [WebRTC](http://www.webrtc.org/)
+* [Mauz Khan](https://www.webrtc-experiment.com/)
 * [Git-Pages](https://pages.github.com/)
 * [Jekyll](http://jekyllrb.com/)
 * [SO-Simple Jekyll Theme](https://github.com/mmistakes/so-simple-theme)
-* [Mauz Khan](https://www.webrtc-experiment.com/)
 
